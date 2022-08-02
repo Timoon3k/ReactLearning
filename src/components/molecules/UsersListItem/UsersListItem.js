@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/atoms/Button/Button';
-import { Wrapper } from './UsersListItem.style';
+import { StyledAverage, StyledInfo, Wrapper } from './UsersListItem.style';
 
-const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => (
-  <Wrapper>
-    <div>{average}</div>
-    <div>
-      <p>{name}</p>
-      <p>{attendance}</p>
-    </div>
-    <Button />
-  </Wrapper>
-);
-
+const UsersListItem = ({ index, userData: { average, name, attendance = '0%' } }) => {
+  return (
+    <Wrapper>
+      <StyledAverage value={average}>{average}</StyledAverage>
+      <StyledInfo>
+        <p>
+          {name}
+          <Button onMouseEnter={() => alert(`To student #${index + 1}`)} />
+        </p>
+        <p>attendance: {attendance}</p>
+      </StyledInfo>
+    </Wrapper>
+  );
+};
 UsersListItem.propTypes = {
   userData: PropTypes.shape({
     average: PropTypes.string.isRequired,
