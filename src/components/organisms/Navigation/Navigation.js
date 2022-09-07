@@ -6,15 +6,15 @@ const Navigation = () => {
     <Wrapper>
       <Logo>
         <h1>
-          Lista
+          Study
           <br />
-          Studentów
+          Buddy
         </h1>
       </Logo>
-      <StyledLink to="/">Panel</StyledLink>
-      <StyledLink to="/add-user">Dodaj użytkownika</StyledLink>
-      <StyledLink to="/">Ustawienia</StyledLink>
-      <StyledLink to="/">Wyloguj</StyledLink>
+      <StyledLink end to="/">
+        Dashboard
+      </StyledLink>
+      <StyledLink to="/add-user">Add users</StyledLink>
     </Wrapper>
   );
 };
