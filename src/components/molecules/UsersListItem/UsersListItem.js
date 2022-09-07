@@ -16,7 +16,7 @@ const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => {
           {name}
           <DeleteButton onClick={() => deleteUser(name)} />
         </p>
-        <p>średnia:{attendance}</p>
+        <p>Attendance:{attendance}</p>
       </StyledInfo>
     </Wrapper>
   );
